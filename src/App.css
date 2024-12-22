@@ -1,0 +1,102 @@
+/* App.scss */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Board.scss */
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  border: 2px solid black;
+}
+
+.board-row {
+  display: contents;
+}
+
+/* Square.scss */
+.square {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #999;
+  background-color: #f0d9b5;
+}
+
+.square.selected {
+  border: 2px solid red;
+}
+
+.square:nth-child(even) {
+  background-color: #b58863;
+}
+
+.piece {
+  font-size: 32px;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Timer.scss */
+.timer {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.timer .active {
+  font-weight: bold;
+  color: green;
+}
+
+/* MoveList.scss */
+.move-list {
+  width: 200px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #f9f9f9;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.move-list h3 {
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.move-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.move-list li {
+  margin: 5px 0;
+}
+
+/* Notification.scss */
+.notification {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffeb3b;
+  border: 1px solid #fdd835;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
